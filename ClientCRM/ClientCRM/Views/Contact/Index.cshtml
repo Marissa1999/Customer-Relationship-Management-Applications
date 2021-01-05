@@ -1,0 +1,18 @@
+﻿@model ClientCRM.Models.Client
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    @Html.DisplayFor(model => model.first_name)
+    @Html.DisplayFor(model => model.last_name)
+</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { id = Model.client_id })
+</p>
+
+@Html.Partial("ContactList", Model.Contacts)
+
+@Html.ActionLink("Back to List", "Index")

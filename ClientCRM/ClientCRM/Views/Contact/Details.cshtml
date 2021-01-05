@@ -1,0 +1,37 @@
+﻿@model ClientCRM.Models.Contact
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>
+    Details for
+    @Html.DisplayFor(model => model.Client.first_name)
+    @Html.DisplayFor(model => model.Client.last_name)
+</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.info)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.contact_id }) |
+    @Html.ActionLink("Back to List", "Index", new { id = Model.client_id });
+</p>
